@@ -5,7 +5,7 @@
 %define		pdir	Inline
 %define		pname	CPR
 Summary:	Inline::CPR - C Perl Run
-Summary(pl):	Inline::CPR - Uruchamianie perla z C
+Summary(pl):	Inline::CPR - uruchamianie perla z C
 Name:		perl-Inline-CPR
 Version:	0.12
 Release:	3
