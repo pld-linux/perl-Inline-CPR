@@ -4,7 +4,7 @@
 			# "make test" attemts to install files
 #
 %include	/usr/lib/rpm/macros.perl
-%define		pdir	Inline
+%define	pdir	Inline
 %define		pname	CPR
 Summary:	Inline::CPR - C Perl Run
 Summary(pl):	Inline::CPR - uruchamianie perla z C
