@@ -1,11 +1,14 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Inline
-%define	pname	CPR
+%define		pdir	Inline
+%define		pname	CPR
 Summary:	Inline::CPR - C Perl Run
 Summary(pl):	Inline::CPR - Uruchamianie perla z C
 Name:		perl-Inline-CPR
 Version:	0.12
-Release:	1
+Release:	2
 License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pname}-%{version}.tar.gz
@@ -27,7 +30,8 @@ kodu Perla w C.
 
 %build
 perl Makefile.PL
-%{__make}
+%{__make} OPTIMIZE="%{rpmcflags}"
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
