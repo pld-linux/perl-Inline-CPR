@@ -1,0 +1,10 @@
+--- Inline-CPR-0.12/c/cpr.plc~	2004-05-30 22:58:20.000000000 +0000
++++ Inline-CPR-0.12/c/cpr.plc	2004-05-30 22:58:20.000000000 +0000
+@@ -16,6 +16,6 @@
+ 	"$bin/cpr.pl",
+ 	argv[argc - 1],
+ 	NULL);
+-  printf("The CPR interpreter failed to exec $bin/perl\nThe system call 'execl' failed with error code %d\n", errno);
++  printf("The CPR interpreter failed to exec $bin/perl\\nThe system call 'execl' failed with error code %d\\n", errno);
+   return errno;
+ }
