@@ -29,7 +29,7 @@ kodu Perla w C.
 %setup -q -n %{pdir}-%{pname}-%{version}
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags}"
 %{!?_without_tests:%{__make} test}
 
