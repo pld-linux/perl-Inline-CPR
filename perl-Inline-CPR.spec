@@ -9,7 +9,7 @@ Summary:	Inline::CPR - C Perl Run
 Summary(pl):	Inline::CPR - uruchamianie perla z C
 Name:		perl-Inline-CPR
 Version:	0.12
-Release:	3
+Release:	4
 License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pname}-%{version}.tar.gz
