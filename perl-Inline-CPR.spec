@@ -5,7 +5,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Inline
-%define		pname	CPR
+%define		pnam	CPR
 Summary:	Inline::CPR - C Perl Run
 Summary(pl):	Inline::CPR - uruchamianie perla z C
 Name:		perl-Inline-CPR
@@ -13,7 +13,7 @@ Version:	0.12
 Release:	5
 License:	Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pname}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	7f2694934f58de24ece46864c641f176
 Patch0:		%{name}-gcc3.patch
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -30,7 +30,7 @@ Inline::CPR - uruchamianie Perla z C. Pozwala na wbudowywanie
 kodu Perla w C.
 
 %prep
-%setup -q -n %{pdir}-%{pname}-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 %patch0 -p1
 
 %build
