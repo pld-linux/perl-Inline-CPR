@@ -8,13 +8,13 @@ Summary:	Inline::CPR - C Perl Run
 Summary(pl):	Inline::CPR - Uruchamianie perla z C
 Name:		perl-Inline-CPR
 Version:	0.12
-Release:	2
+Release:	3
 License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pname}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
 BuildRequires:	perl-Inline >= 0.41
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	gcc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -29,7 +29,8 @@ kodu Perla w C.
 %setup -q -n %{pdir}-%{pname}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make} OPTIMIZE="%{rpmcflags}"
 %{!?_without_tests:%{__make} test}
 
@@ -46,5 +47,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %attr(755,root,root) %{_bindir}/*
-%{perl_sitelib}/Inline/CPR.pm
+%{perl_vendorlib}/Inline/CPR.pm
 %{_mandir}/man3/*
