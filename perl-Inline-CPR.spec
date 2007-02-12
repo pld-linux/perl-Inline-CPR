@@ -7,7 +7,7 @@
 %define		pdir	Inline
 %define		pnam	CPR
 Summary:	Inline::CPR - C Perl Run
-Summary(pl):	Inline::CPR - uruchamianie perla z C
+Summary(pl.UTF-8):   Inline::CPR - uruchamianie perla z C
 Name:		perl-Inline-CPR
 Version:	0.12
 Release:	5
@@ -25,7 +25,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Inline::CPR - C Perl Run. Embed Perl in C, ala Inline.
 
-%description -l pl
+%description -l pl.UTF-8
 Inline::CPR - uruchamianie Perla z C. Pozwala na wbudowywanie
 kodu Perla w C.
 
