@@ -3,7 +3,6 @@
 %bcond_with	tests	# perform "make test"
 			# "make test" attemts to install files
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Inline
 %define		pnam	CPR
 Summary:	Inline::CPR - C Perl Run
